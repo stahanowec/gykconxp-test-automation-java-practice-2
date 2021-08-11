@@ -82,7 +82,7 @@ public class MainTest {
     public static Object[][] task3DataProvider() {
         return new Object[][]{
                 {8, 33},
-                {11, 143}, {0, 0},
+                {11, 143},
                 {1, 0}};
     }
 

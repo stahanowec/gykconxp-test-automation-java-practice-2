@@ -45,7 +45,7 @@ public class Main {
                     sum += j;
                 }
                 return sum;
-            } else if (value < 0) {
+            } else if (value <= 0) {
                 throw new IllegalArgumentException();
             }
         }
