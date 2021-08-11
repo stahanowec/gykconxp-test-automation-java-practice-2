@@ -2,33 +2,41 @@ package com.epam.test.automation.java.practice2;
 
 public class Main {
 
-    /**
-     * <summary>
-     * Implement code according to description of task 1.
-     * </summary>
-     */
     public static int task1(int value) {
-        //TODO: Delete line below and write your own solution;
-        throw new UnsupportedOperationException();
+
+        var stringValues = String.valueOf(value);
+        var sum = 0;
+        for (int i = 0; i < stringValues.length(); i++) {
+            var charAt = (int) stringValues.charAt(i) - '0';
+            if (charAt % 2 != 0) {
+                sum += charAt;
+            }
+        }
+        return sum;
     }
 
-    /**
-     * <summary>
-     * Implement code according to description of task 2.
-     * </summary>
-     */
     public static int task2(int value) {
-        //TODO: Delete line below and write your own solution;
-        throw new UnsupportedOperationException();
+        var binaryString = Integer.toBinaryString(value);
+        var sum = 0;
+        for (int i = 0; i < binaryString.length(); i++) {
+            var charAt = (int) binaryString.charAt(i) - '0';
+                sum += charAt;
+        }
+        return sum;
     }
 
-    /**
-     * <summary>
-     * Implement code according to description of task 3.
-     * </summary>
-     */
     public static int task3(int value) {
-        //TODO: Delete line below and write your own solution;
-        throw new UnsupportedOperationException();
+        int[] fiboArray = new int[value];
+        fiboArray[0] = 0;
+        fiboArray[1] = 1;
+        var sum = 0;
+        for (int i = 2; i < value; i++) {
+            fiboArray[i] = fiboArray[i - 1] + fiboArray[i - 2];
+        }
+
+        for (int j : fiboArray) {
+            sum += j;
+        }
+        return sum;
     }
 }
