@@ -2,6 +2,8 @@ package com.epam.test.automation.java.practice2;
 
 public class Main {
 
+    private Main() {}
+
     public static int task1(int value) {
         if (value <= 0) {
             throw new IllegalArgumentException();
@@ -9,7 +11,7 @@ public class Main {
         var stringValues = String.valueOf(value);
         var sum = 0;
         for (int i = 0; i < stringValues.length(); i++) {
-            var charAt = (int) stringValues.charAt(i) - '0';
+            var charAt =  stringValues.charAt(i) - '0';
             if (charAt % 2 != 0) {
                 sum += charAt;
             }
@@ -24,7 +26,7 @@ public class Main {
         var binaryString = Integer.toBinaryString(value);
         var sum = 0;
         for (int i = 0; i < binaryString.length(); i++) {
-            var charAt = (int) binaryString.charAt(i) - '0';
+            var charAt = binaryString.charAt(i) - '0';
             sum += charAt;
         }
         return sum;
